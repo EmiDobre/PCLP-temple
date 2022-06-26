@@ -130,9 +130,11 @@ int CodA(char* cod_mic) {
     // vf X prim
     int X;
     // codul ascii=nr decimal+48, 1=49 etc
-    X = 10*((unsigned int)cod_mic[lungime-2]-48) + ((unsigned int)cod_mic[lungime-1] - 48);
+    unsigned int a = (unsigned int)cod_mic[lungime-2]-48;
+    unsigned int b = (unsigned int)cod_mic[lungime-1] - 48;
+    X = 10 * a + b;
     for ( i = 2; i <= X/2; i++ ) {
-        if ( X % i == 0) {
+        if ( X % i == 0 ) {
             prim = 0;
             break;
         }

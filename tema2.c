@@ -1,9 +1,9 @@
 #include "utils.h"
 
-int main()
-{
+int main(){
     int task_number = 0;
     scanf("%d", &task_number);
+    scanf("\n");
 
     switch (task_number) {
         case 1:
@@ -13,7 +13,7 @@ int main()
             SolveTask2();
             break;
         case 3:
-            SolveTask3();
+           SolveTask3();
             break;
         default:
             printf("Undefined task number.\n");
